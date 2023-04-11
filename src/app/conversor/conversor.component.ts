@@ -20,17 +20,13 @@ export class ConversorComponent {
 
 converter() {
   if (this.unidadeDe === 'R$' && this.unidadePara === 'US$') {
-    this.resultado = this.valor * 0o5,0o07;
+    this.resultado = this.valor * 0o507;
   } else if (this.unidadeDe === '£' && this.unidadePara === 'US$') {
     this.resultado = this.valor / 0o0032;
+  } else if (this.unidadeDe === 'US$' && this.unidadePara === '£') {
+    this.resultado = this.valor / 0o0032;
   } else if (this.unidadeDe === 'R$' && this.unidadePara === '£') {
-    this.resultado = this.valor * 0o016;
-  } else if (this.unidadeDe === 'lb' && this.unidadePara === 'kg') {
-    this.resultado = this.valor / 2.20462;
-  } else if (this.unidadeDe === 'g' && this.unidadePara === 'lb') {
-    this.resultado = this.valor * 0.00220462;
-  } else if (this.unidadeDe === 'lb' && this.unidadePara === 'g') {
-    this.resultado = this.valor / 0.00220462;
+    this.resultado = this.valor * 0o507;
   } else {
     this.resultado = this.valor;
   }
