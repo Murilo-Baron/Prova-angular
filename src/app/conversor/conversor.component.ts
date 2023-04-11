@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class ConversorComponent {
 
   valor: number = 0;
+  ValCambio: number = 0;
   unidade: string = 'R$';
   unidadeDe: string = 'US$';
   unidadePara: string = '£';
@@ -16,7 +17,11 @@ export class ConversorComponent {
   constructor() {
     this.valor = 0; // Inicializa a variável novamente com o valor 0 no construtor
     this.resultado = 0; // Inicializa a variável novamente com o valor 0 no construtor
+    this.ValCambio = 0;
   }
+
+  cambio
+  
 
   converter(valor: number, unidadeDe: string, unidadePara: string) {
     if (unidadeDe === 'R$' && unidadePara === 'US$') {
