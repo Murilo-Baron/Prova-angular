@@ -15,8 +15,8 @@ export class ConversorComponent {
   resultado: number = 0;;
 
   constructor() {
-    this.valor = 0; // Inicializa a variável novamente com o valor 0 no construtor
-    this.resultado = 0; // Inicializa a variável novamente com o valor 0 no construtor
+    this.valor = 0;
+    this.resultado = 0;
     this.ValCambio = 0;
   }
 
