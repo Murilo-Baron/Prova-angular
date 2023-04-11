@@ -20,17 +20,17 @@ export class ConversorComponent {
 
   converter(valor: number, unidadeDe: string, unidadePara: string) {
     if (unidadeDe === 'R$' && unidadePara === 'US$') {
-      return valor * 0.19;
+      return valor * 5.30;
     } else if (unidadeDe === 'US$' && unidadePara === 'R$') {
       return valor * 5.30;
     } else if (unidadeDe === 'R$' && unidadePara === '£') {
-      return valor * 0.025;
+      return valor * 6.11;
     } else if (unidadeDe === '£' && unidadePara === 'R$') {
-      return valor * 39.73;
+      return valor * 0.16;
     } else if (unidadeDe === 'US$' && unidadePara === '£') {
-      return valor * 0.72;
+      return valor * 30.90;
     } else if (unidadeDe === '£' && unidadePara === 'US$') {
-      return valor * 1.39;
+      return valor * 0.032;
     } else {
       return valor;
     }
