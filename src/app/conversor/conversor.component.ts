@@ -18,17 +18,21 @@ export class ConversorComponent {
     this.resultado = 0; // Inicializa a variável novamente com o valor 0 no construtor
   }
 
-converter() {
-  if (this.unidadeDe === 'R$' && this.unidadePara === 'US$') {
-    this.resultado = this.valor * 0o507;
-  } else if (this.unidadeDe === '£' && this.unidadePara === 'US$') {
-    this.resultado = this.valor / 0o0032;
-  } else if (this.unidadeDe === 'US$' && this.unidadePara === '£') {
-    this.resultado = this.valor / 0o0032;
-  } else if (this.unidadeDe === 'R$' && this.unidadePara === '£') {
-    this.resultado = this.valor * 0o507;
-  } else {
-    this.resultado = this.valor;
+  converter(valor: number, unidadeDe: string, unidadePara: string) {
+    if (unidadeDe === 'R$' && unidadePara === 'US$') {
+      return valor * 0.19;
+    } else if (unidadeDe === 'US$' && unidadePara === 'R$') {
+      return valor * 5.30;
+    } else if (unidadeDe === 'R$' && unidadePara === '£') {
+      return valor * 0.025;
+    } else if (unidadeDe === '£' && unidadePara === 'R$') {
+      return valor * 39.73;
+    } else if (unidadeDe === 'US$' && unidadePara === '£') {
+      return valor * 0.72;
+    } else if (unidadeDe === '£' && unidadePara === 'US$') {
+      return valor * 1.39;
+    } else {
+      return valor;
+    }
   }
-}
 }
