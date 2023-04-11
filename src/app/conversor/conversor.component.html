@@ -3,13 +3,15 @@
     <h2>Conversor de moedas</h2>
     <div class="input-group">
       <input type="number" [(ngModel)]="valor" name="valor" id="valor" class="form-control" placeholder="Insira um valor">
-      <div class="input-group-append">
+      <input type="number" [(ngModel)]="ValCambio" name="ValCambio" id="ValCambio" class="form-control" placeholder="Insira o valor do cambio">
+    <div class="input-group-append">
         <select [(ngModel)]="unidadeDe" name="unidadeDe" id="unidadeDe" class="custom-select">
           <option value="R$">Reais</option>
           <option value="US$">Dolar</option>
           <option value="£">Libras Egipcias</option>
         </select>
       </div>
+
       <div class="input-group-append">
         <select [(ngModel)]="unidadePara" name="unidadePara" id="unidadePara" class="custom-select">
           <option value="R$">Reais</option>
@@ -18,11 +20,8 @@
         </select>
       </div>
 
-      <div class = "imput-group-append">
-        <imput type="number" [(ngModel)] 
-      </div>
       <div class="input-group-append">
-        <button (click)="resultado = converter(valor, unidadeDe, unidadePara)" class="btn btn-primary">Converter</button>
+        <button (click)="resultado = converter(valor, unidadeDe, unidadePara, ValCambio)" class="btn btn-primary">Converter</button>
       </div>
     </div>
     <input type="text" class="form-control result-box" readonly [(ngModel)]="resultado" name="resultado" id="resultado" placeholder="Resultado">

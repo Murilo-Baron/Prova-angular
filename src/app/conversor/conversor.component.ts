@@ -20,22 +20,20 @@ export class ConversorComponent {
     this.ValCambio = 0;
   }
 
-  cambio
-  
 
-  converter(valor: number, unidadeDe: string, unidadePara: string) {
+  converter(valor: number, unidadeDe: string, unidadePara: string, ValCambio: number) {
     if (unidadeDe === 'R$' && unidadePara === 'US$') {
-      return valor * 5.30;
+      return valor * ValCambio;
     } else if (unidadeDe === 'US$' && unidadePara === 'R$') {
-      return valor * 5.30;
+      return valor * ValCambio;
     } else if (unidadeDe === 'R$' && unidadePara === '£') {
-      return valor * 6.11;
+      return valor * ValCambio;
     } else if (unidadeDe === '£' && unidadePara === 'R$') {
-      return valor * 0.16;
+      return valor * ValCambio;
     } else if (unidadeDe === 'US$' && unidadePara === '£') {
-      return valor * 30.90;
+      return valor * ValCambio;
     } else if (unidadeDe === '£' && unidadePara === 'US$') {
-      return valor * 0.032;
+      return valor * ValCambio;
     } else {
       return valor;
     }
