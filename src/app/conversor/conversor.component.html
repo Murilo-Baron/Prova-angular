@@ -1,22 +1,22 @@
 <div class="container">
-  <div class="box">
-    <h2>Conversor de moedas</h2>
-    <div class="input-group">
+  <div class="box p-4">
+    <h2 class="mb-4">Conversor de moedas</h2>
+    <div class="input-group mb-3">
       <input type="number" [(ngModel)]="valor" name="valor" id="valor" class="form-control" placeholder="Insira um valor">
-      <input type="number" [(ngModel)]="ValCambio" name="ValCambio" id="ValCambio" class="form-control" placeholder="Insira o valor do cambio">
-    <div class="input-group-append">
+      <input type="number" [(ngModel)]="ValCambio" name="ValCambio" id="ValCambio" class="form-control" placeholder="Insira o valor do câmbio">
+      <div class="input-group-append">
         <select [(ngModel)]="unidadeDe" name="unidadeDe" id="unidadeDe" class="custom-select">
           <option value="R$">Reais</option>
-          <option value="US$">Dolar</option>
-          <option value="£">Libras Egipcias</option>
+          <option value="US$">Dólar</option>
+          <option value="£">Libras Egípcias</option>
         </select>
       </div>
 
       <div class="input-group-append">
         <select [(ngModel)]="unidadePara" name="unidadePara" id="unidadePara" class="custom-select">
           <option value="R$">Reais</option>
-          <option value="US$">Dolar</option>
-          <option value="£">Libras Egipcias</option>
+          <option value="US$">Dólar</option>
+          <option value="£">Libras Egípcias</option>
         </select>
       </div>
 
